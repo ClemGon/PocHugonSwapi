@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="cursive"
-        android:text="List of people"
+        android:text="@string/list_of_people"
         android:textColor="#FFFFFF"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,9 +22,9 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/LstPeople"
-        android:layout_width="373dp"
-        android:layout_height="597dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="374dp"
+        android:layout_height="544dp"
+        android:layout_marginTop="16dp"
         android:layout_marginBottom="32dp"
         android:background="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -33,4 +33,15 @@
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintVertical_bias="0.0"
         tools:listitem="@layout/people_item" />
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="188dp"
+        android:layout_height="66dp"
+        android:text="Back"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LstPeople" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,15 +4,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000000"
     tools:context=".activities.PlanetsActivity">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Planets"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="16dp"
+        android:fontFamily="cursive"
+        android:text="List of planets"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonBackPlanets"
+        android:layout_width="188dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="28dp"
+        android:text="Back"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LstPeople" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/lstPlanets"
+        android:layout_width="331dp"
+        android:layout_height="529dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/buttonBackPlanets"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        tools:listitem="@layout/planets_item" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

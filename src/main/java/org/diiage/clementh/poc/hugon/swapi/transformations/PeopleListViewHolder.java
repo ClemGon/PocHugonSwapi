@@ -1,6 +1,7 @@
 package org.diiage.clementh.poc.hugon.swapi.transformations;
 
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import org.diiage.clementh.poc.hugon.swapi.R;
 
@@ -11,11 +12,13 @@ public class PeopleListViewHolder extends RecyclerView.ViewHolder {
    public TextView txtName;
    public TextView txtGender;
    public TextView txtBirthYear;
+   public Button btnDetail;
 
     public PeopleListViewHolder(@NonNull View itemView) {
         super(itemView);
-        txtName = itemView.findViewById(R.id.txtName);
-        txtGender = itemView.findViewById(R.id.txtGender);
-        txtBirthYear = itemView.findViewById(R.id.txtBirthYear);
+        txtName = itemView.findViewById(R.id.txtNameStarShip);
+        txtGender = itemView.findViewById(R.id.txtManufacturerStarShip);
+        txtBirthYear = itemView.findViewById(R.id.txtCostInCreditsStarShip);
+        btnDetail = itemView.findViewById(R.id.buttonDetailsPeople);
     }
 }

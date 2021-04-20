@@ -34,4 +34,60 @@ public class Planet implements Serializable {
 
     @SerializedName("films")
     public ArrayList<String> filmsUrls;
+
+    public String getName() {
+        return name;
+    }
+
+    public String getClimate() {
+        return climate;
+    }
+
+    public String getCreated() {
+        return created;
+    }
+
+    public String getDiameter() {
+        return diameter;
+    }
+
+    public String getEdited() {
+        return edited;
+    }
+
+    public String getGravity() {
+        return gravity;
+    }
+
+    public String getOrbitalPeriod() {
+        return orbitalPeriod;
+    }
+
+    public String getPopulation() {
+        return population;
+    }
+
+    public String getRotationPeriod() {
+        return rotationPeriod;
+    }
+
+    public String getSurfaceWater() {
+        return surfaceWater;
+    }
+
+    public String getTerrain() {
+        return terrain;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public ArrayList<String> getFilmsUrls() {
+        return filmsUrls;
+    }
+
+    public ArrayList<String> getResidentsUrls() {
+        return residentsUrls;
+    }
 }

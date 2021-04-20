@@ -19,4 +19,16 @@ public class Starship extends Vehicle implements Serializable {
     @SerializedName("MGLT")
     public String mglt;
 
+
+    public String getHyperdriveRating() {
+        return hyperdriveRating;
+    }
+
+    public String getMglt() {
+        return mglt;
+    }
+
+    public String getStarshipClass() {
+        return starshipClass;
+    }
 }

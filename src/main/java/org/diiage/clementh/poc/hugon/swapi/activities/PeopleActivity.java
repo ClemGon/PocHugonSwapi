@@ -10,8 +10,13 @@ import org.diiage.clementh.poc.hugon.swapi.models.People;
 import org.diiage.clementh.poc.hugon.swapi.models.SWModelList;
 import org.diiage.clementh.poc.hugon.swapi.transformations.PeopleListAdapter;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.PopupWindow;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,6 +34,10 @@ public class PeopleActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_people);
 
+        Button btnBack = findViewById(R.id.buttonBack);
+        btnBack.setOnClickListener(view -> finish());
+
+
         RecyclerView lstPeople = findViewById(R.id.LstPeople);
         lstPeople.setLayoutManager(new LinearLayoutManager(this));
 
@@ -45,9 +54,6 @@ public class PeopleActivity extends AppCompatActivity {
                 if (response.isSuccessful()){
                     Log.d("API", "Retrieved " + response.body().results + " People ");
 
-
-
-
                     PeopleListAdapter peopleListAdapter = new PeopleListAdapter(response.body().results);
                     lstPeople.setAdapter(peopleListAdapter);
                 }
@@ -55,14 +61,7 @@ public class PeopleActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<SWModelList<People>> call, Throwable t) {
-
             }
         });
-
-    }
-
-
-
-
-
+}
 }

@@ -41,4 +41,68 @@ public class Vehicle implements Serializable {
 
     @SerializedName("films")
     public ArrayList<String> filmsUrls;
+
+    public String getUrl() {
+        return url;
+    }
+
+    public String getEdited() {
+        return edited;
+    }
+
+    public String getCreated() {
+        return created;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getCargoCapacity() {
+        return cargoCapacity;
+    }
+
+    public String getConsumables() {
+        return consumables;
+    }
+
+    public String getCostInCredits() {
+        return costInCredits;
+    }
+
+    public String getCrew() {
+        return crew;
+    }
+
+    public String getLength() {
+        return length;
+    }
+
+    public String getManufacturer() {
+        return manufacturer;
+    }
+
+    public String getMaxAtmospheringSpeed() {
+        return maxAtmospheringSpeed;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public String getPassengers() {
+        return passengers;
+    }
+
+    public String getVehicleClass() {
+        return vehicleClass;
+    }
+
+    public ArrayList<String> getFilmsUrls() {
+        return filmsUrls;
+    }
+
+    public ArrayList<String> getPilotsUrls() {
+        return pilotsUrls;
+    }
 }

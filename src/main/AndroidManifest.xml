@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.diiage.clementh.poc.hugon.swapi">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -10,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PocHugonSwapi">
-        <activity android:name=".activities.PeopleActivity"></activity>
+        <activity android:name=".activities.PeopleDetailActivity"></activity>
+        <activity android:name=".activities.PeopleActivity" />
         <activity android:name=".activities.StarshipsActivity" />
         <activity android:name=".activities.PlanetsActivity" />
         <activity android:name=".activities.MainActivity">

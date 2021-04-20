@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".activities.PeopleDetailActivity">
+
+    <Button
+        android:id="@+id/buttonBackDetail"
+        android:layout_width="188dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="32dp"
+        android:text="Back"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LstPeople" />
+
+    <TextView
+        android:id="@+id/txtNameDetail"
+        android:layout_width="72dp"
+        android:layout_height="31dp"
+        android:text="Name"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtGenreDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Genre"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNameDetail" />
+
+    <TextView
+        android:id="@+id/txtBirtYearDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Birthyear"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtGenreDetail" />
+
+    <TextView
+        android:id="@+id/txtHeightDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Height"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtBirtYearDetail" />
+
+    <TextView
+        android:id="@+id/txtMassDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mass"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtHeightDetail" />
+
+    <TextView
+        android:id="@+id/txtHairColorDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hair Color"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMassDetail" />
+
+    <TextView
+        android:id="@+id/txtSkinColorDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SkinColor"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtHairColorDetail" />
+
+    <TextView
+        android:id="@+id/txtEyeColorDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EyeColor"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSkinColorDetail" />
+
+    <TextView
+        android:id="@+id/txtHomeWorldDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HomeWorld"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEyeColorDetail" />
+
+    <TextView
+        android:id="@+id/txtFilmsDetail"
+        android:layout_width="57dp"
+        android:layout_height="30dp"
+        android:text="Films"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtHomeWorldDetail" />
+
+    <TextView
+        android:id="@+id/txtCreatedDetail"
+        android:layout_width="57dp"
+        android:layout_height="30dp"
+        android:text="Created"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtFilmsDetail" />
+
+    <TextView
+        android:id="@+id/txtEditedDetail"
+        android:layout_width="57dp"
+        android:layout_height="30dp"
+        android:text="Edited"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCreatedDetail" />
+
+    <Button
+        android:id="@+id/btnGoToWorldDetail"
+        android:layout_width="168dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="156dp"
+        android:text="Go to world"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/txtHomeWorldDetail"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

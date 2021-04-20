@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.145"
         app:layout_constraintVertical_chainStyle="packed"
-        tools:text="Luke Skywalker" />
+        tools:text="Mars" />
 
     <TextView
         android:id="@+id/txtManufacturerStarShip"
@@ -27,7 +27,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtNameStarShip"
-        tools:text="Male" />
+        tools:text="Arid" />
 
     <TextView
         android:id="@+id/txtCostInCreditsStarShip"
@@ -37,12 +37,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtManufacturerStarShip"
-        tools:text="2045" />
+        tools:text="desert" />
+
+    <TextView
+        android:id="@+id/txtClassStarShip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/buttonDetailsPeople"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCostInCreditsStarShip"
+        app:layout_constraintVertical_bias="1.0"
+        tools:text="Dimension" />
 
     <Button
         android:id="@+id/buttonDetailsPeople"
         android:layout_width="121dp"
         android:layout_height="39dp"
+        android:layout_marginTop="24dp"
         android:text="Details"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
