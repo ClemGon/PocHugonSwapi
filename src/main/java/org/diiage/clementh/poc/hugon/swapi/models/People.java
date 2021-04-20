@@ -45,4 +45,52 @@ public class People implements Serializable {
 
     @SerializedName("vehicles")
     public ArrayList<String> vehiclesUrls;
+
+    public String getName() {
+        return name;
+    }
+
+    public String getBirthYear() {
+        return birthYear;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public String getHairColor() {
+        return hairColor;
+    }
+
+    public String getHeight() {
+        return height;
+    }
+
+    public String getHomeWorldUrl() {
+        return homeWorldUrl;
+    }
+
+    public String getMass() {
+        return mass;
+    }
+
+    public String getSkinColor() {
+        return skinColor;
+    }
+
+    public ArrayList<String> getFilmsUrls() {
+        return filmsUrls;
+    }
+
+    public ArrayList<String> getSpeciesUrls() {
+        return speciesUrls;
+    }
+
+    public ArrayList<String> getStarshipsUrls() {
+        return starshipsUrls;
+    }
+
+    public ArrayList<String> getVehiclesUrls() {
+        return vehiclesUrls;
+    }
 }
