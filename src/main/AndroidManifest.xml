@@ -9,8 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PocHugonSwapi">
-        <activity android:name=".PeopleActivity"></activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".activities.PeopleActivity"></activity>
+        <activity android:name=".activities.StarshipsActivity" />
+        <activity android:name=".activities.PlanetsActivity" />
+        <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

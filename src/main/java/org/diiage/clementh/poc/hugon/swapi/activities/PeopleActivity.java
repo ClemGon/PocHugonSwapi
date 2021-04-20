@@ -1,7 +1,7 @@
-package org.diiage.clementh.poc.hugon.swapi;
+package org.diiage.clementh.poc.hugon.swapi.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+import org.diiage.clementh.poc.hugon.swapi.R;
 import android.os.Bundle;
 
 public class PeopleActivity extends AppCompatActivity {
