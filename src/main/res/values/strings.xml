@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">PocHugonSwapi</string>
+    <string name="stars_wars_information">Stars Wars information</string>
+    <string name="go_to_starships_list">Go to starships list</string>
+    <string name="go_to_planets_list">Go to planets list</string>
+    <string name="go_to_people_list">Go to people list</string>
+    <string name="logo_of_star_wars_main_page">Logo of Star wars main page</string>
 </resources>
