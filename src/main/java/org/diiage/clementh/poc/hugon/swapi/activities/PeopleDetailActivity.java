@@ -33,9 +33,7 @@ public class PeopleDetailActivity extends AppCompatActivity {
 
         Button btnBack = findViewById(R.id.buttonBackDetail);
         btnBack.setOnClickListener(view -> finish());
-
         Button btnGoToPlanets = findViewById(R.id.btnGoToWorldDetail);
-
         Intent intent = getIntent();
 
         //find all textView
@@ -50,7 +48,6 @@ public class PeopleDetailActivity extends AppCompatActivity {
         TextView txtCreated = findViewById(R.id.txtCreatedDetail);
         TextView txtEdited = findViewById(R.id.txtEditedDetail);
 
-
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://swapi.dev/api/")
                 .addConverterFactory(GsonConverterFactory.create())
@@ -58,48 +55,49 @@ public class PeopleDetailActivity extends AppCompatActivity {
         IPeopleService iPeopleService = retrofit.create(IPeopleService.class);
         IPlanetsService iPlanetsService = retrofit.create(IPlanetsService.class);
 
+        Log.d("DEBUGBATARD", intent.getStringExtra(PARAM_PEOPLE_URL));
+
         iPeopleService.people(intent.getStringExtra(PARAM_PEOPLE_URL)).enqueue(new Callback<People>() {
             @Override
             public void onResponse(Call<People> call, Response<People> response) {
-                Log.d("APIDEBUG", "Retrieved " + response.body().name + " People ");
-                txtName.setText(response.body().name);
-                txtGenre.setText("Gender: " + response.body().gender);
-                txtBirth.setText("Birth Day: " +response.body().birthYear);
-                txtHeight.setText("Height: " +response.body().height + " Meters");
-                txtMass.setText("Mass: " +response.body().mass + " Kg");
-                txtHairColor.setText("Hair Color: " +response.body().hairColor);
-                txtSkinColor.setText("Skin Color: " +response.body().skinColor);
-                txtHomeWorld.setText("Home World: " +response.body().homeWorldUrl);
+                if (response != null && response.isSuccessful()) {
+                    Log.d("APIDEBUG", "Retrieved " + response.body().name + " People ");
+                    txtName.setText(response.body().name);
+                    txtGenre.setText("Gender: " + response.body().gender);
+                    txtBirth.setText("Birth Day: " + response.body().birthYear);
+                    txtHeight.setText("Height: " + response.body().height + " Meters");
+                    txtMass.setText("Mass: " + response.body().mass + " Kg");
+                    txtHairColor.setText("Hair Color: " + response.body().hairColor);
+                    txtSkinColor.setText("Skin Color: " + response.body().skinColor);
+                    txtHomeWorld.setText("Home World: " + response.body().homeWorldUrl);
 
-                String created = DateFormaters.DateFormater(response.body().created);
-                String edited = DateFormaters.DateFormater(response.body().edited);
+                    String created = DateFormaters.DateFormater(response.body().created);
+                    String edited = DateFormaters.DateFormater(response.body().edited);
 
-                txtCreated.setText("Created at: " + created);
-                txtEdited.setText("Edited at: " + edited);
+                    txtCreated.setText("Created at: " + created);
+                    txtEdited.setText("Edited at: " + edited);
 
-                String idPlanet = response.body().homeWorldUrl;
-                char numberPlanet = idPlanet.charAt(idPlanet.length()-2);
-                String number = Character.toString(numberPlanet);
+                    String[] urlSplitted = response.body().homeWorldUrl.split("/");
+                    String planetId = urlSplitted[urlSplitted.length - 1];
 
-                iPlanetsService.planet(number).enqueue(new Callback<Planet>() {
-                    @Override
-                    public void onResponse(Call<Planet> call, Response<Planet> response) {
-                        txtHomeWorld.setText("Home world: " +response.body().name);
-                        btnGoToPlanets.setOnClickListener(v -> {
-                            ChangePageWithParameters(response.body().url);
-                        });
+                    iPlanetsService.planet(planetId).enqueue(new Callback<Planet>() {
+                        @Override
+                        public void onResponse(Call<Planet> call, Response<Planet> response) {
+                            txtHomeWorld.setText("Home world: " + response.body().name);
+                            btnGoToPlanets.setOnClickListener(v -> {
+                                ChangePageWithParameters(response.body().url);
+                            });
+                        }
 
-                    }
-
-                    @Override
-                    public void onFailure(Call<Planet> call, Throwable t) {
-
-                    }
-                });
-
-
+                        @Override
+                        public void onFailure(Call<Planet> call, Throwable t) {
+                        }
+                    });
+                }
+                else {
+                    Log.e("APIDEBUG",response.message());
+                }
             }
-
             @Override
             public void onFailure(Call<People> call, Throwable t) {
                 Log.d("APIDEBUG", "PRROBLEMES ");
@@ -109,11 +107,11 @@ public class PeopleDetailActivity extends AppCompatActivity {
 
     public void ChangePageWithParameters(String url){
         Intent intent = new Intent(this, PlanetsDetailActivity.class);
-        char letter = url.charAt(url.length()-2);
-        String number = Character.toString(letter);
 
-
-        intent.putExtra(PlanetsDetailActivity.PARAM_PELANET_URL, number);
+        String[] urlSplitted = url.split("/");
+        String planetId = urlSplitted[urlSplitted.length - 1];
+        Log.d("DEBUGBAARD", planetId);
+        intent.putExtra(PlanetsDetailActivity.PARAM_PELANET_URL, planetId);
         startActivity(intent);
     }
 }

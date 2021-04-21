@@ -1,6 +1,7 @@
 package org.diiage.clementh.poc.hugon.swapi.transformations;
 
 import android.content.DialogInterface;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,7 +35,6 @@ public class PeopleListAdapter extends RecyclerView.Adapter<PeopleListViewHolder
     @Override
     public PeopleListViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType){
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.people_item, parent,false);
-
         return new PeopleListViewHolder(v);
     }
 
@@ -47,7 +47,6 @@ public class PeopleListAdapter extends RecyclerView.Adapter<PeopleListViewHolder
 
         holder.btnDetail.setOnClickListener(v1 ->  {
             peopleConsumer.accept(people);
-
         });
 
     }
@@ -56,5 +55,4 @@ public class PeopleListAdapter extends RecyclerView.Adapter<PeopleListViewHolder
     public int getItemCount() {
         return peopleList.size();
     }
-
 }

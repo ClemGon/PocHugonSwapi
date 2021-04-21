@@ -78,9 +78,13 @@ public class PeopleActivity extends AppCompatActivity {
 
 public void changePAGE(String url){
     Intent intent  = new Intent(this, PeopleDetailActivity.class);
-    char letter = url.charAt(url.length()-2);
-    String number = Character.toString(letter);
-    intent.putExtra(PeopleDetailActivity.PARAM_PEOPLE_URL, number);
+
+    String[] urlSplitted = url.split("/");
+    String peopleId = urlSplitted[urlSplitted.length - 1];
+    Log.d("PeopleID", peopleId);
+    intent.putExtra(PeopleDetailActivity.PARAM_PEOPLE_URL, peopleId);
+
+
     startActivity(intent);
 }
 
