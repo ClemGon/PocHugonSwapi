@@ -13,9 +13,11 @@ public class PeopleListViewHolder extends RecyclerView.ViewHolder {
    public TextView txtGender;
    public TextView txtBirthYear;
    public Button btnDetail;
+   public View itemView;
 
     public PeopleListViewHolder(@NonNull View itemView) {
         super(itemView);
+        this.itemView = itemView;
         txtName = itemView.findViewById(R.id.txtNameStarShip);
         txtGender = itemView.findViewById(R.id.txtManufacturerStarShip);
         txtBirthYear = itemView.findViewById(R.id.txtCostInCreditsStarShip);

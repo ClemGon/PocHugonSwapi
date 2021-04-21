@@ -10,7 +10,7 @@ import retrofit2.http.Path;
 public interface IPeopleService {
     //Get a people by id
     @GET("people/{id}/")
-    Call<People> people(@Path("id") int id);
+    Call<People> people(@Path("id") String id);
 
     //Get all people
     @GET("people/")

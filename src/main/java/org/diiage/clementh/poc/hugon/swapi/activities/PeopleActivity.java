@@ -29,6 +29,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class PeopleActivity extends AppCompatActivity {
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +50,7 @@ public class PeopleActivity extends AppCompatActivity {
                 .build();
         IPeopleService iPeopleService = retrofit.create(IPeopleService.class);
 
+
         iPeopleService.listPeoples().enqueue(new Callback<SWModelList<People>>() {
             @Override
             public void onResponse(Call<SWModelList<People>> call, Response<SWModelList<People>> response) {
@@ -56,6 +59,13 @@ public class PeopleActivity extends AppCompatActivity {
 
                     PeopleListAdapter peopleListAdapter = new PeopleListAdapter(response.body().results);
                     lstPeople.setAdapter(peopleListAdapter);
+
+                    peopleListAdapter.setPeopleConsumer(people -> {
+                        Log.d("ADAPTER", "Clic sur le people " + people.getUrl());
+                        changePAGE(people.getUrl());
+
+                    });
+
                 }
             }
 
@@ -63,5 +73,15 @@ public class PeopleActivity extends AppCompatActivity {
             public void onFailure(Call<SWModelList<People>> call, Throwable t) {
             }
         });
+
 }
+
+public void changePAGE(String url){
+    Intent intent  = new Intent(this, PeopleDetailActivity.class);
+    char letter = url.charAt(url.length()-2);
+    String number = Character.toString(letter);
+    intent.putExtra(PeopleDetailActivity.PARAM_PEOPLE_URL, number);
+    startActivity(intent);
+}
+
 }

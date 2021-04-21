@@ -93,4 +93,16 @@ public class People implements Serializable {
     public ArrayList<String> getVehiclesUrls() {
         return vehiclesUrls;
     }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public String getCreated() {
+        return created;
+    }
+
+    public String getEdited() {
+        return edited;
+    }
 }

@@ -22,132 +22,145 @@
 
     <TextView
         android:id="@+id/txtNameDetail"
-        android:layout_width="72dp"
+        android:layout_width="168dp"
         android:layout_height="31dp"
+        android:layout_marginTop="16dp"
         android:text="Name"
+        android:textAlignment="center"
         android:textColor="#FFFFFF"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
 
     <TextView
         android:id="@+id/txtGenreDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
         android:text="Genre"
+        android:textAlignment="textStart"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNameDetail" />
+        app:layout_constraintTop_toBottomOf="@+id/txtNameDetail"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        />
 
     <TextView
-        android:id="@+id/txtBirtYearDetail"
+        android:id="@+id/txtCreatedDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Birthyear"
+        android:layout_marginTop="8dp"
+        android:text="Created"
+        android:textAlignment="textStart"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtGenreDetail" />
+        app:layout_constraintTop_toBottomOf="@+id/txtHomeWorldDetail" />
 
     <TextView
-        android:id="@+id/txtHeightDetail"
+        android:id="@+id/txtHomeWorldDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Height"
+        android:layout_marginTop="8dp"
+        android:text="HomeWorld"
+        android:textAlignment="textStart"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtBirtYearDetail" />
-
-    <TextView
-        android:id="@+id/txtMassDetail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Mass"
-        android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtHeightDetail" />
-
-    <TextView
-        android:id="@+id/txtHairColorDetail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hair Color"
-        android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtMassDetail" />
+        app:layout_constraintTop_toBottomOf="@+id/txtSkinColorDetail" />
 
     <TextView
         android:id="@+id/txtSkinColorDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="SkinColor"
+        android:textAlignment="textStart"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtHairColorDetail" />
 
     <TextView
-        android:id="@+id/txtEyeColorDetail"
+        android:id="@+id/txtHairColorDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="EyeColor"
+        android:layout_marginTop="8dp"
+        android:text="Hair Color"
+        android:textAlignment="textStart"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtSkinColorDetail" />
+        app:layout_constraintTop_toBottomOf="@+id/txtMassDetail" />
 
     <TextView
-        android:id="@+id/txtHomeWorldDetail"
+        android:id="@+id/txtMassDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="HomeWorld"
+        android:layout_marginTop="8dp"
+        android:text="Mass"
+        android:textAlignment="textStart"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtEyeColorDetail" />
+        app:layout_constraintTop_toBottomOf="@+id/txtHeightDetail" />
 
     <TextView
-        android:id="@+id/txtFilmsDetail"
-        android:layout_width="57dp"
-        android:layout_height="30dp"
-        android:text="Films"
+        android:id="@+id/txtHeightDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Height"
+        android:textAlignment="textStart"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtHomeWorldDetail" />
+        app:layout_constraintTop_toBottomOf="@+id/txtBirtYearDetail" />
 
     <TextView
-        android:id="@+id/txtCreatedDetail"
-        android:layout_width="57dp"
-        android:layout_height="30dp"
-        android:text="Created"
+        android:id="@+id/txtBirtYearDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Birthyear"
+        android:textAlignment="textStart"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtFilmsDetail" />
+        app:layout_constraintTop_toBottomOf="@+id/txtGenreDetail" />
 
     <TextView
         android:id="@+id/txtEditedDetail"
-        android:layout_width="57dp"
-        android:layout_height="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="412dp"
         android:text="Edited"
+        android:textAlignment="textStart"
         android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtCreatedDetail" />
 
     <Button
         android:id="@+id/btnGoToWorldDetail"
-        android:layout_width="168dp"
+        android:layout_width="138dp"
         android:layout_height="39dp"
-        android:layout_marginTop="156dp"
+        android:layout_marginTop="360dp"
         android:text="Go to world"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/txtHomeWorldDetail"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

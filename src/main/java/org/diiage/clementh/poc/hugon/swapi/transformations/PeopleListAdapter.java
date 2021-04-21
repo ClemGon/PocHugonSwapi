@@ -21,7 +21,9 @@ public class PeopleListAdapter extends RecyclerView.Adapter<PeopleListViewHolder
     private Consumer<People>  peopleConsumer;
 
     public PeopleListAdapter(List<People> peopleList){
+
         this.peopleList = peopleList;
+        this.peopleConsumer = people -> {};
     }
 
     public void setPeopleConsumer(Consumer<People> peopleConsumer) {
@@ -45,6 +47,7 @@ public class PeopleListAdapter extends RecyclerView.Adapter<PeopleListViewHolder
 
         holder.btnDetail.setOnClickListener(v1 ->  {
             peopleConsumer.accept(people);
+
         });
 
     }
