@@ -11,7 +11,7 @@ import retrofit2.http.Path;
 public interface IPlanetsService {
         //Get a planet by id
         @GET("planets/{id}/")
-        Call<Planet> planet(@Path("id") int id);
+        Call<Planet> planet(@Path("id") String id);
 
         //Get all planets
         @GET("planets/")

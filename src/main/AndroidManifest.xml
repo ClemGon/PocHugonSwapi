@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PocHugonSwapi">
-        <activity android:name=".activities.PeopleDetailActivity"></activity>
+        <activity android:name=".activities.PlanetsDetailActivity"></activity>
+        <activity android:name=".activities.PeopleDetailActivity" />
         <activity android:name=".activities.PeopleActivity" />
         <activity android:name=".activities.StarshipsActivity" />
         <activity android:name=".activities.PlanetsActivity" />
